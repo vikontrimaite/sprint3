@@ -6,7 +6,7 @@
 3. Go to local host
 4. Now the project should be working well! 
 
-+ in index.php file change vairable $prefix to name of the current directory where the folder is located.
++ in index.php file change variable $prefix to name of the current directory where the folder is located.
 
 ## Technology:
 - PHP
