@@ -1,10 +1,11 @@
 <?php
-use Doctrine\ORM\Mapping as ORM;
 
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="projects")
+ * @ORM\Table(name="project")
  */
 class Project
 {
@@ -14,36 +15,33 @@ class Project
      * @ORM\GeneratedValue
      */
     protected $id;
+    /** 
+     * @ORM\Column(type="string") 
+     */
+    protected $name;
 
     /**
-     * @ORM\Column(type="string")
+     * One project has many employees. This is the inverse side.
+     * @ORM\OneToMany(targetEntity="Employee", mappedBy="project")
      */
-    protected $item;
+    private $employees;
 
-    /**
-     * One Project has One Employee.
-     * @ORM\OneToOne(targetEntity="Customer", inversedBy="cart")
-     * @ORM\JoinColumn(name="customer_id", referencedColumnName="id")
-     */
-    private $employee;
-
-    public function setItem($item)
-    {
-        $this->item = $item;
+    public function __construct() {
+        $this->employees = new ArrayCollection();
     }
 
-    public function getItem()
+    public function getId()
     {
-        return $this->item;
+        return $this->id;
     }
 
-    public function setCustomer($customer)
+    public function getName()
     {
-        $this->customer = $customer;
+        return $this->name;
     }
 
-    public function getCustomer()
+    public function setName($name)
     {
-        return $this->customer;
+        $this->name = $name;
     }
 }

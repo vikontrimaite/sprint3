@@ -1,4 +1,5 @@
 <?php
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -14,34 +15,25 @@ class Employee
      */
     protected $id;
 
-    /**
-     * @ORM\Column(type="string")
+       /** 
+     * @ORM\Column(type="string") 
      */
-    protected $name;
+    protected $empl_name;
 
     /**
-     * One Employee has One Project.
-     * @ORM\OneToOne(targetEntity="project", mappedBy="employee")
+     * Many employees have one project. This is the owning side.
+     * @ORM\ManyToOne(targetEntity="Project", inversedBy="employees")
+     * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      */
     private $project;
 
     public function getName()
     {
-        return $this->name;
+        return $this->empl_name;
     }
 
-    public function getProject()
+    public function setName($empl_name)
     {
-        return $this->project;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function setProject($project)
-    {
-        $this->project = $project;
+        $this->empl_name = $empl_name;
     }
 }
