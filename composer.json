@@ -1,0 +1,20 @@
+{
+    "name": "vi/sprint3",
+    "description": "project managment system version 2 project",
+    "authors": [
+        {
+            "name": "Vilija Kontrimaite",
+            "email": "vikontrimaite@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.8"
+    },
+    "autoload": {
+        "files": [
+			"src/models/Employee.php",
+			"src/models/Project.php"
+		]
+    }
+
+}
