@@ -1,4 +1,5 @@
 <?php
+namespace Models;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -26,6 +27,11 @@ class Employee
      * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      */
     private $project;
+
+    public function getId()
+    {
+        return $this->id;
+    }
 
     public function getName()
     {

@@ -11,10 +11,10 @@
         "doctrine/orm": "^2.8"
     },
     "autoload": {
-        "files": [
-			"src/models/Employee.php",
-			"src/models/Project.php"
-		]
-    }
+            "psr-4": { 
+                "Models\\": "src/models/"
+            }
+        }
+    
 
 }
