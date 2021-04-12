@@ -1,11 +1,6 @@
 # Projects managment system version 2
 
 ## How to start the project:
-1. Do git a clone code where you can launch php web app (webroot)
-2. Import the mysql dump file
-3. Go to local host
-4. Now the project should be working well! 
-
 1. Open command line and go to the webroot where you will launch this repository
 2.  Do git a clone code where you can launch php web app
 3. Download Composer (if needed) 
