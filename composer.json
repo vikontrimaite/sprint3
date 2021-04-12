@@ -14,7 +14,15 @@
             "psr-4": { 
                 "Models\\": "src/models/"
             }
-        }
+        },
+        
+
+            "config": {
+            
+                "platform-check": false
+            }
+            
+            
     
 
 }

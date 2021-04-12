@@ -8,13 +8,16 @@ switch ($url) {
     case $prefix . '' :
         require __DIR__ . '/src/views/index.php';
         break;
-    case $prefix . '/about' :
-        require __DIR__ . '/src/views/about.php';
-        break;
     case $prefix . '/employees' :
         require __DIR__ . '/src/views/employees.php';
         break;
+    case $prefix . '/employees.php' :
+        require __DIR__ . '/src/views/employees.php';
+        break;
     case $prefix . '/projects' :
+        require __DIR__ . '/src/views/projects.php';
+        break;
+    case $prefix . '/projects.php' :
         require __DIR__ . '/src/views/projects.php';
         break;
     default:
