@@ -6,16 +6,16 @@
 3. Go to local host
 4. Now the project should be working well! 
 
-1. Open command line and go to the webroot where you will clone this repository
-2. Git clone in webroot this git repository
+1. Open command line and go to the webroot where you will launch this repository
+2.  Do git a clone code where you can launch php web app
 3. Download Composer (if needed) 
 ``php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php``
-php -r "unlink('composer-setup.php');"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"``
 4. ``php composer.phar init``
 5. ``php composer.phar require doctrine/orm``
-6. In index.php file change variable $prefix to name of the current directory where the folder is located.
+6. In ``index.php`` file change variable ``$prefix`` to name of the current directory where the folder is located.
 7. In ``composer.json`` add this line 
 ``,
     "autoload": {
